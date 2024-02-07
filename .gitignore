@@ -1,0 +1,8 @@
+venv
+*.wav
+*.mp3
+*.ogg
+*.opus
+*.flac
+BASE/*
+OUTPUT/*
