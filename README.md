@@ -19,12 +19,12 @@ Before using the script, make sure to install the required dependencies:
 ## How to Use
 
 1. Clone this repository to your local machine.
-2. Navigate to the cloned repository folder.
+2. Navigate to the cloned repository directory.
 3. Drag'n'drop audio files to the BASE folder.
 4. Run the script using the command:
 
     ```bash
-    python batch-rms-setter.py
+    python batch-rms-normalizer.py
     ```
 
 5. Optionally, check BASE audio files levels and OUTPUT levels logged in the terminal.
