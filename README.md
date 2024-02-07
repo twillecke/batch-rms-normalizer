@@ -32,7 +32,7 @@ Before using the script, make sure to install the required dependencies:
 7. Exported files can be found in OUTPUT folder, according to BASE file structure.
 
 ### Changing target dBFS level
-1. Open the `batch-rms-setter.py` script in a text editor.
+1. Open the `batch-rms-normalizer.py` script in a text editor.
 2. Set your desired Target dBFS Level in the variable `target_dBFS_level`.
 3. Save the script.
 
