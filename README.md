@@ -1,4 +1,4 @@
-# Batch RMS Setter
+# Batch RMS Normalizer
 
 This is a simple Python script to batch process audio files by setting their RMS dBFS levels to a given target. This script may prove useful in situations where audio files volumes are too inconsistent and a general correction is required.
 
