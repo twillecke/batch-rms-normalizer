@@ -4,5 +4,6 @@ venv
 *.ogg
 *.opus
 *.flac
-BASE/*
-OUTPUT/*
+source_sounds
+OUTPUT
+__pycache__
