@@ -10,7 +10,7 @@ def rms(file_address):
         print(f"Error processing {file_address}: {e}")
         return None, None
 
-def process_files(directory):
+def process_files(directory, max_peak_level=-3):
     try:
         for root, _, filenames in os.walk(directory):
             for filename in filenames:
@@ -19,7 +19,7 @@ def process_files(directory):
                 if filename.lower().endswith((".wav", ".mp3", ".ogg", ".flac")):
                     source_rms = rms(file_address)
                     if source_rms is not None:
-                        check_str = "  ✓" if source_rms < -3 else "  ✕  (FAILED: Peak should be strictly below -3dbFS)"
+                        check_str = "  ✓" if source_rms < max_peak_level else f'  ✕  (FAILED: Peak should be strictly below {max_peak_level})'
                         print("{:<70} Source Max Peak: {:.2f} dBFS".format(file_address, source_rms) + check_str)
 
     except Exception as e:
