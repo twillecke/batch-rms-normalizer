@@ -1,4 +1,5 @@
 import os
+import argparse
 from pydub import AudioSegment
 
 def match_target_amplitude(sound, target_dBFS_level):
@@ -39,7 +40,11 @@ def process_files(directory, output_directory, target_dBFS_level):
         print(f"Error: {e}")
 
 if __name__ == "__main__":
-    directory_path = "./BASE"
-    output_path = "./OUTPUT"
-    target_dBFS_level = -14
-    process_files(directory_path, output_path, target_dBFS_level)
+    parser = argparse.ArgumentParser(description='Normalize audio files to a target dBFS level.')
+    parser.add_argument('-t', '--target-dBFS-level', type=float, default=-14, help='Target dBFS level for normalization')
+    parser.add_argument('-d', '--directory', default='./source_sounds', help='Directory containing audio files to normalize')
+    parser.add_argument('-o', '--output-directory', default='./output', help='Directory to save normalized audio files')
+    
+    args = parser.parse_args()
+    
+    process_files(args.directory, args.output_directory, args.target_dBFS_level)
