@@ -24,8 +24,7 @@ Before using the script, make sure to install the required dependencies:
     python sound_check.py [-h] [-d DIRECTORY] [--min-rms MIN_RMS] [--max-rms MAX_RMS] [--max-peak MAX_PEAK]
     ```
 2. Navigate to the cloned repository directory.
-3. Drag'n'drop audio files to the BASE folder.
-4. Run the script using the command:
+3. Run the script using the command:
 
     ```bash
     python sound-check.py
